@@ -3,7 +3,7 @@ import { Agent as HttpAgent } from 'http';
 import { Agent as HttpsAgent } from 'https';
 import { jwtVerify } from 'jose';
 import type { JWTPayload, JWSHeaderParameters } from 'jose';
-import { InvalidTokenError } from 'oauth2-bearer';
+import { InvalidTokenError } from '../oauth2-bearer/index';
 import discovery from './discovery';
 import getKeyFn from './get-key-fn';
 import validate, { defaultValidators, Validators } from './validate';
@@ -252,7 +252,7 @@ const jwtVerifier = ({
       await validate(payload, header, validators);
       return { payload, header, token: jwt };
     } catch (e) {
-      throw new InvalidTokenError(e.message);
+      throw new InvalidTokenError((e as Error).message);
     }
   };
 };

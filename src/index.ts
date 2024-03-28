@@ -12,9 +12,9 @@ import {
   RequiredScopes,
   scopeIncludesAny as _scopeIncludesAny,
   VerifyJwtResult as AuthResult,
-} from 'access-token-jwt';
-import type { JWTPayload } from 'access-token-jwt';
-import { getToken } from 'oauth2-bearer';
+} from './access-token-jwt/index';
+import type { JWTPayload } from './access-token-jwt/index';
+import { getToken } from './oauth2-bearer/index';
 
 export interface AuthOptions extends JwtVerifierOptions {
   /**
@@ -196,10 +196,10 @@ export {
   Validators,
   JWTHeader,
   JSONPrimitive,
-} from 'access-token-jwt';
+} from './access-token-jwt/index';
 export {
   UnauthorizedError,
   InvalidRequestError,
   InvalidTokenError,
   InsufficientScopeError,
-} from 'oauth2-bearer';
+} from './oauth2-bearer/index';
