@@ -1,9 +1,10 @@
 module.exports = {
-  out: "./docs/",
+  out: './docs/',
   excludePrivate: false,
   excludeExternals: false,
   hideGenerator: true,
-  readme: "none",
-  entryPoints: ["packages/express-oauth2-jwt-bearer/src"],
-  tsconfig: "tsconfig.typedoc.json",
+  readme: 'none',
+  gitRevision: process.env.npm_package_version,
+  entryPoints: ['src', '../access-token-jwt/src'],
+  toc: false,
 };
