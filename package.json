@@ -2,8 +2,8 @@
   "name": "express-oauth2-jwt-bearer",
   "description": "Authentication middleware for Express.js that validates JWT bearer access tokens.",
   "version": "1.6.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "repository": "auth0/node-oauth2-jwt-bearer",
   "scripts": {
     "test": "jest test --coverage",
@@ -12,7 +12,7 @@
     "build": "rollup -c"
   },
   "files": [
-    "dist"
+    "src"
   ],
   "author": "Auth0 <support@auth0.com>",
   "homepage": "https://github.com/auth0/node-oauth2-jwt-bearer/tree/main/packages/express-oauth2-jwt-bearer",
